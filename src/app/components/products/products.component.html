@@ -1,0 +1,27 @@
+<ul class="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 px-32 pb-8">
+  <li
+    class="h-[32rem] shadow-md shadow-black/15 rounded-lg flex flex-col items-center"
+    *ngFor="let product of products"
+  >
+    <div class="w-full rounded-lg flex items-center justify-center">
+      <img
+        class="rounded-md object-contain"
+        ngSrc="assets/laptop.png"
+        [alt]="product.title"
+        width="256"
+        height="256"
+      />
+    </div>
+    <div class="px-8 space-y-8">
+      <h1 class="font-bold text-xl text-text">{{ product.title }}</h1>
+      <p class="text-zinc-600 line-clamp-4">{{ product.description }}</p>
+    </div>
+
+    <div class="flex w-full px-8 border-t mt-auto items-center py-2">
+      <h2 class="text-text text-2xl font-bold font-roboto">
+        <span class="text-zinc-500 text-lg pr-0.5 font-medium">$</span
+        >{{ product.price.toFixed(2) }}
+      </h2>
+    </div>
+  </li>
+</ul>
