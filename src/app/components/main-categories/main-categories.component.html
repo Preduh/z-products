@@ -1,0 +1,9 @@
+<ul class="flex w-full justify-between bg-zinc-200 h-20 px-32 py-2 divide-x-2">
+  <li
+    class="text-zinc-600 flex items-center justify-center w-full bg-white first:rounded-l-2xl last:rounded-r-2xl space-x-2 cursor-pointer hover:bg-zinc-100 hover:text-primary-green transition-colors active:scale-[99%]"
+    *ngFor="let main_category of main_categories"
+  >
+    <i-lucide name="{{ main_category.icon }}" class="my-icon"></i-lucide>
+    <p class="font-medium text-lg">{{ main_category.label }}</p>
+  </li>
+</ul>
