@@ -1,18 +1,18 @@
-<section id="banner" class="w-full h-80 bg-zinc-200/70">
-  <div class="flex h-full w-full justify-between px-32">
-    <div class="h-full flex justify-center flex-col space-y-2">
-      <h2 class="text-zinc-800 font-bold font-roboto text-6xl">
-        Product Catalog
-      </h2>
-      <h3 class="text-primary-green font-medium text-xl">
-        Shop / All Products
-      </h3>
-    </div>
-
-    <img
-      class="h-full"
-      src="assets/female-freelancer-portrait-banner.png"
-      alt=""
-    />
+<section id="banner" class="w-full h-96 px-32 flex items-center justify-center">
+  <div class="w-full rounded-3xl">
+    <p-carousel
+      [value]="products"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="3000"
+      orientation="horizontal"
+      [showIndicators]="true"
+      showNavigators="false"
+    >
+      <ng-template let-product pTemplate="item">
+        <div class="{{ product.color }} w-full h-80 rounded-3xl"></div>
+      </ng-template>
+    </p-carousel>
   </div>
 </section>
